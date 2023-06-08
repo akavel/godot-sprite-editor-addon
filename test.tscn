@@ -1,21 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://da1plvfmvg642"]
+[gd_scene load_steps=5 format=3 uid="uid://da1plvfmvg642"]
 
-[ext_resource type="Texture2D" uid="uid://bhnmnv2xxdhs6" path="res://assets/batman.png" id="2"]
-[ext_resource type="Texture2D" uid="uid://csit8gteafee3" path="res://assets/spiderman.png" id="3"]
-[ext_resource type="Texture2D" uid="uid://38m1axtsv1v3" path="res://assets/Archaeologist.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://4bonrarqewc7" path="res://assets/batman.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://c515dr1fpgnyc" path="res://assets/spiderman.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://emg7f6hbtm8s" path="res://assets/Archaeologist.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://glruwpmde0rq" path="res://assets/test2.png" id="4_pkl60"]
 
 [node name="test" type="Node2D"]
 
 [node name="superman" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource("2")
 
 [node name="spiderman" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(32, 0)
 texture = ExtResource("3")
 
 [node name="archeologist" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(56, 0)
 texture = ExtResource("4")
 
 [node name="Sprite_empty" type="Sprite2D" parent="."]
+texture_filter = 1
 position = Vector2(0, 40)
+texture = ExtResource("4_pkl60")

@@ -71,8 +71,7 @@ func _on_pallist_index_pressed(index:int)->void:
 
 func load_palettes():
 	pop.clear()
-	var dir = Directory.new()
-	dir.open(pal_path)
+	var dir = DirAccess.open(pal_path)
 	dir.list_dir_begin()
 
 	while true:

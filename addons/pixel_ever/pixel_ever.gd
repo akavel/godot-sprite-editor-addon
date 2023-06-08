@@ -3,11 +3,12 @@ extends EditorPlugin
 var spr:Sprite2D
 var dock 
 var eds = get_editor_interface().get_selection()
+var dock_button: Button
 
 func _enter_tree() -> void:
 	eds.selection_changed.connect(_on_selection_changed)
 	dock = preload("res://addons/pixel_ever/sprite_editor.tscn").instantiate()
-	add_control_to_bottom_panel(dock,"Sprite_Editor")
+	dock_button = add_control_to_bottom_panel(dock,"Sprite Editor")
 	dock.saved.connect(set_path_file)
 
 func _exit_tree() -> void:
@@ -25,9 +26,10 @@ func _on_selection_changed():
 				dock.change_path_file(path_to_file,true)
 			else:
 				dock.change_path_file("res://addons/pixel_ever/empty.png",false)
-			dock.visible = true
+			dock_button.button_pressed = false
+			dock_button.button_pressed = true
 		else:
-			dock.visible= false
+			dock_button.button_pressed = false
 			
 func set_path_file(path)->void:
 #	get_editor_interface().get_resource_filesystem().update_file(path)
